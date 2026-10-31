@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prince — Web dan jaringan MikroTik</title>
+<meta name="description" content="Portofolio Prince: aplikasi web, jaringan MikroTik, dan otomasi monitoring. Lab OSPF, pipeline Zabbix ke Telegram, dan kalkulator subnet IPv4.">
+<meta name="color-scheme" content="dark light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prince — Web dan jaringan MikroTik">
+<meta property="og:description" content="Aplikasi web, jaringan MikroTik, dan otomasi monitoring.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050607'/%3E%3Cpath d='M10 25V7h7a5.5 5.5 0 010 11h-7' fill='none' stroke='%23c6ff00' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="app.js" defer></script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="nav"><div class="wrap bar">
+<a class="wm" href="#top" aria-label="Prince, kembali ke atas">Prince</a>
+<button class="search" id="pal-open" type="button" aria-haspopup="dialog"><span>Cari bagian</span><kbd id="kbd">⌘K</kbd></button>
+<nav aria-label="Utama"><ul>
+<li><a href="#proyek">Proyek</a></li><li><a href="#keahlian">Keahlian</a></li><li><a href="#alat">Alat</a></li><li><a href="#tulisan">Tulisan</a></li><li><a href="#kontak">Kontak</a></li>
+</ul></nav>
+<a class="btn btn-a" href="#kontak">Hubungi</a>
+</div></header>
+
+<main id="main">
+<section class="hero wrap" aria-labelledby="h1">
+<h1 id="h1">Prince Febrian Web Portofolio.</h1>
+<p class="sub">Saya membangun <span class="u">aplikasi web</span>, merancang <span class="u">jaringan MikroTik</span>, dan mengotomatiskan <span class="u">monitoring</span>.</p>
+<div class="cta">
+<a class="btn btn-a" href="#proyek">Lihat proyek</a>
+<a class="btn btn-g" href="https://github.com/Fedha99" rel="noopener">GitHub <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 3h7v7M11 3 3 11" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+</div>
+</section>
+
+<section class="wrap" aria-labelledby="h-angka">
+<h2 class="sr" id="h-angka">Angka</h2>
+<ul class="stats">
+<li><b>25</b><span>router di lab OSPF</span><small>lab sedang dikerjakan</small></li>
+<li><b>5</b><span>area OSPF</span><small>lab sedang dikerjakan</small></li>
+<li><b>5</b><span>script di blackarch-fixing</span></li>
+<li><b class="ph">[isi]</b><span>artikel Tecotechno</span></li>
+</ul>
+</section>
+
+<section class="sec wrap" id="proyek" aria-labelledby="h-proyek">
+<h2 id="h-proyek" class="rv">Proyek</h2>
+<p class="lead rv">Lab, pipeline, dan aplikasi yang saya kerjakan. Data pada tampilan mini ditandai “contoh” atau “ilustrasi”.</p>
+<div class="bento">
+
+<article class="card c4 rv" id="p-monitoring">
+<h3>Pipeline monitoring</h3>
+<p>Zabbix memantau router MikroTik lewat SNMP dan memicu workflow n8n. Notifikasi Telegram tiba real-time, laporan tren harian masuk ke Google Sheets, dan n8n diekspos lewat HTTPS dengan Cloudflare Quick Tunnel.</p>
+<p>Yang sudah diperbaiki: timestamp epoch, field JSON yang hilang, dan republish manual.</p>
+<div class="ui">
+<ol class="flow" aria-label="Alur pipeline"><li>MikroTik · SNMP</li><li>Zabbix</li><li>n8n</li><li>Telegram</li><li>Google Sheets</li></ol>
+<div class="bubble"><p><span class="tag">contoh</span></p><p>Zabbix: edge-01, ether2 down</p><p class="t">14:02</p></div>
+</div>
+</article>
+
+<article class="card c2 rv" id="p-ospf">
+<h3>Lab OSPF multi-area</h3>
+<p>25 router dalam 5 area di GNS3 dengan RouterOS CHR. Area 1 sudah berjalan, area lainnya sedang dikerjakan.</p>
+<div class="ui">
+<svg class="topo" viewBox="0 0 300 150" role="img" aria-label="Skema ringkas: Area 1 aktif, empat area lain sedang dikerjakan">
+<defs>
+<g id="ta"><path d="M0-12 10 6H-10Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cy="-12" r="4" fill="currentColor"/><circle cx="10" cy="6" r="4" fill="currentColor"/><circle cx="-10" cy="6" r="4" fill="currentColor"/></g>
+<g id="tw" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0-12 10 6H-10Z" stroke-dasharray="3 3"/><circle cy="-12" r="4" style="fill:var(--sf)"/><circle cx="10" cy="6" r="4" style="fill:var(--sf)"/><circle cx="-10" cy="6" r="4" style="fill:var(--sf)"/></g>
+</defs>
+<path class="lk" d="M50 40H150M150 40H250M50 40 100 112M150 40 100 112M150 40 200 112M250 40 200 112M100 112H200"/>
+<use href="#ta" x="50" y="40" class="on"/><use href="#tw" x="150" y="40" class="wip"/><use href="#tw" x="250" y="40" class="wip"/><use href="#tw" x="100" y="112" class="wip"/><use href="#tw" x="200" y="112" class="wip"/>
+<text x="50" y="68" class="tx a">Area 1 · aktif</text><text x="150" y="68" class="tx">dikerjakan</text><text x="250" y="68" class="tx">dikerjakan</text><text x="100" y="140" class="tx">dikerjakan</text><text x="200" y="140" class="tx">dikerjakan</text>
+</svg>
+<p class="cap">Skema ringkas, bukan topologi penuh 25 router.</p>
+</div>
+</article>
+
+<article class="card c3 rv" id="p-web">
+<h3>Web Monitor <span class="tag">dalam pengembangan</span></h3>
+<p>Satu aplikasi web berbentuk PWA untuk MikroTik API, FreeRADIUS, dan Zabbix. Dibangun dengan Laravel 13, Filament, PostgreSQL 17, dan Docker Compose.</p>
+<div class="ui">
+<table><caption>Status router <span class="tag">contoh</span></caption>
+<thead><tr><th scope="col">Router</th><th scope="col">Status</th><th scope="col">CPU</th></tr></thead>
+<tbody><tr><td>edge-01</td><td><i class="dot"></i>up</td><td>12%</td></tr><tr><td>dist-02</td><td><i class="dot"></i>up</td><td>31%</td></tr><tr><td>lab-03</td><td><i class="dot off"></i>down</td><td>—</td></tr></tbody></table>
+</div>
+</article>
+
+<article class="card c3 rv" id="p-ai">
+<h3>Orkestrasi AI</h3>
+<p>Pengalaman memakai Hermes Agent untuk mendelegasikan tugas coding ke Claude Code, Codex, dan opencode lewat jembatan MCP dan ACP. opencode dipasangkan dengan CodeGraph MCP untuk query struktur kode.</p>
+<div class="ui">
+<p class="cap"><span class="tag">ilustrasi</span></p>
+<pre tabindex="0"><code>hermes ▸ delegasikan tugas
+ ├─ claude-code
+ ├─ codex
+ └─ opencode ─ CodeGraph MCP
+jembatan: MCP ⇄ ACP</code></pre>
+</div>
+</article>
+
+<article class="card c2 rv" id="p-ba">
+<h3>blackarch-fixing</h3>
+<p>5 script untuk memperbaiki repositori BlackArch.</p>
+<div class="ui">
+<a class="urlbar" href="https://github.com/Fedha99/blackarch-fixing" rel="noopener">github.com/<wbr>Fedha99/<wbr>blackarch-fixing</a>
+<p class="five" role="img" aria-label="5 script"><i></i><i></i><i></i><i></i><i></i></p>
+</div>
+</article>
+
+<article class="card c4 rv" id="tulisan">
+<h3>Tecotechno</h3>
+<p>Blog teknis tempat saya menulis tentang MikroTik, Zabbix, GNS3, Linux, AI agent, dan dasar keamanan.</p>
+<div class="ui">
+<span class="urlbar"><span class="ph">[URL blog]</span></span>
+<ul class="chips"><li>MikroTik</li><li>Zabbix</li><li>GNS3</li><li>Linux</li><li>AI agent</li><li>Dasar keamanan</li></ul>
+</div>
+</article>
+
+</div>
+</section>
+
+<section class="sec wrap" id="keahlian" aria-labelledby="h-skill">
+<h2 id="h-skill" class="rv">Keahlian</h2>
+<div class="groups">
+<div class="rv"><h3>Networking</h3><ul class="chips"><li>RouterOS</li><li>CHR</li><li>OSPF multi-area</li><li>GNS3</li><li>Materi MTCNA</li></ul></div>
+<div class="rv"><h3>Monitoring dan otomasi</h3><ul class="chips"><li>Zabbix</li><li>SNMP</li><li>n8n</li><li>Telegram bot</li><li>Google Sheets</li></ul></div>
+<div class="rv"><h3>Web</h3><ul class="chips"><li>Laravel</li><li>Filament</li><li>PostgreSQL</li><li>Docker Compose</li><li>WordPress</li><li>Migrasi cPanel</li></ul></div>
+<div class="rv"><h3>Linux</h3><ul class="chips"><li>Arch</li><li>Hyprland</li><li>NixOS (eksperimen)</li><li>Bedrock Linux (eksperimen)</li></ul></div>
+<div class="rv"><h3>Alat AI</h3><ul class="chips"><li>Hermes</li><li>Claude Code</li><li>Codex</li><li>opencode</li><li>MCP</li><li>ACP</li></ul></div>
+<div class="rv"><h3>Keamanan</h3><ul class="chips"><li>Sedang belajar</li><li>Arah: security research</li><li>Target: bug bounty dan VDP</li><li class="ph">[platform latihan]</li></ul></div>
+</div>
+</section>
+
+<section class="sec wrap" id="alat" aria-labelledby="h-alat">
+<div class="tool">
+<div class="rv">
+<h2 id="h-alat">Kalkulator subnet IPv4</h2>
+<p class="lead">Tulis alamat beserta prefiks. Hasilnya network, broadcast, netmask, wildcard, dan rentang host.</p>
+</div>
+<div class="panel rv">
+<form id="sn" novalidate>
+<label for="ip">Alamat IPv4 dengan prefiks</label>
+<div class="row"><input id="ip" name="ip" type="text" value="192.168.10.0/24" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="sn-hint sn-err"><button class="btn btn-a" type="submit">Hitung</button></div>
+<p class="hint" id="sn-hint">Contoh: 192.168.10.0/24</p>
+<p class="err" id="sn-err" role="alert" hidden></p>
+<dl id="sn-out" aria-live="polite">
+<div><dt>Network</dt><dd>192.168.10.0</dd></div><div><dt>Broadcast</dt><dd>192.168.10.255</dd></div><div><dt>Netmask</dt><dd>255.255.255.0</dd></div><div><dt>Wildcard</dt><dd>0.0.0.255</dd></div><div><dt>Host pertama</dt><dd>192.168.10.1</dd></div><div><dt>Host terakhir</dt><dd>192.168.10.254</dd></div><div><dt>Host usable</dt><dd>254</dd></div>
+</dl>
+<p class="hint" id="sn-note"></p>
+<noscript><p class="hint">Hasil di atas adalah contoh statis. Perhitungan otomatis butuh JavaScript.</p></noscript>
+</form>
+</div>
+</div>
+</section>
+
+<section class="sec wrap contact" id="kontak" aria-labelledby="h-kontak">
+<div class="tool">
+<div class="rv">
+<h2 id="h-kontak">Kontak</h2>
+<p class="lead">Punya proyek jaringan, web, atau otomasi monitoring? Kirim kabar, saya senang berdiskusi.</p>
+</div>
+<ul class="ct rv">
+<li><span>Email</span><span class="ph">fedharock@gmail.com</span></li>
+<li><span>GitHub</span><a href="https://github.com/Fedha99" rel="noopener">github.com/Fedha99</a></li>
+<li><span>LinkedIn</span><a href="https://www.linkedin.com/in/prince-annakhla-a0a0a33b9/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BL%2FhQjfLxRMOrTGGmfpJh%2FQ%3D%3D">Prince An-Nakhlah</a><span class="ph"></span></li>
+</ul>
+</div>
+</section>
+</main>
+
+<footer class="wrap">
+<p class="big" aria-hidden="true">Prince</p>
+<small>© 2026 Prince</small>
+</footer>
+</body>
+</html>
